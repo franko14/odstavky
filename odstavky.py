@@ -63,4 +63,5 @@ fig.update_layout(title={'text' : 'Odstávky prenosových kapacít',
                 )
 fig.update_xaxes(showline=True, linewidth=2, linecolor='black', gridwidth=0.5, gridcolor='gray', mirror=True)
 fig.update_yaxes(showline=True, linewidth=2, linecolor='black', gridwidth=0.3, gridcolor='gray', mirror=True)
-fig.show()
+import plotly.io as pio
+pio.write_html(fig, file='index.html', auto_open=True)
